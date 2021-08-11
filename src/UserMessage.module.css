@@ -1,0 +1,25 @@
+.userMessageContainer {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+.user {
+  margin: 0 !important;
+  color: rgb(129, 70, 219);
+  font-size: 16px;
+  line-height: 26px;
+  margin-right: 10px !important;
+}
+.userMessage {
+  margin: 0 !important;
+  font-size: 19px;
+  line-height: 29px;
+  word-break: break-all;
+  background-color: rgba(130, 70, 219, 0.42);
+  border-radius: 5px 20px 20px 20px;
+  padding: 5px 10px;
+  max-width: 75%;
+  color: white;
+}

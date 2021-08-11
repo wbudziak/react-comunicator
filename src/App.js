@@ -1,24 +1,21 @@
-import logo from "./logo.svg";
-import "./App.css";
-
+import React, { useEffect } from "react";
+import { useState } from "react";
+import Chat from "./Chat";
+import Username from "./Username";
 function App() {
+  const [username, setUsername] = useState("");
+  const addUserName = (username) => {
+    setUsername(username);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reloadjljk.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn Woiti Stylez
-        </a>
-      </header>
-    </div>
+    <React.Fragment>
+      {username === "" ? (
+        <Username username={addUserName}></Username>
+      ) : (
+        <Chat username={username}></Chat>
+      )}
+    </React.Fragment>
   );
 }
 
