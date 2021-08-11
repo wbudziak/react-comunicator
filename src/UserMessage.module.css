@@ -1,9 +1,17 @@
-.userMessageContainer {
+.userMessageContainerLeft {
   margin-top: 10px;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
+}
+.userMessageContainerRight {
+  margin-top: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  margin-right: 20px;
 }
 .user {
   margin: 0 !important;

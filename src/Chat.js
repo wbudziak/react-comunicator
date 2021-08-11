@@ -51,7 +51,11 @@ function Chat(props) {
   }
   return (
     <Wrapper>
-      <ChatWindow chatData={data} isLoading={isLoading}></ChatWindow>
+      <ChatWindow
+        chatData={data}
+        isLoading={isLoading}
+        username={username}
+      ></ChatWindow>
       <InputsSection
         chatData={addChatDataHandler}
         username={username}

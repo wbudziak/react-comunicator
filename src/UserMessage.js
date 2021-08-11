@@ -4,10 +4,17 @@ function UserMessage(props) {
   const userName = <p className={styled.user}>{`${props.user} :`}</p>;
   const userMessage = <p className={styled.userMessage}>{props.userMessage}</p>;
   return (
-    <div className={styled.userMessageContainer}>
-      {props.theSamePerson ? userName : ""}
-      {userMessage}
-    </div>
+    <React.Fragment>
+      {props.localName === props.user && (
+        <div className={styled.userMessageContainerRight}>{userMessage}</div>
+      )}
+      {props.localName !== props.user && (
+        <div className={styled.userMessageContainerLeft}>
+          {userName}
+          {userMessage}
+        </div>
+      )}
+    </React.Fragment>
   );
 }
 
