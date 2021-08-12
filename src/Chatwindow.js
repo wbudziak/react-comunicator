@@ -22,12 +22,14 @@ function ChatWindow(props) {
   const scrollRef = useRef(null);
   const [isTheSamePerson, setIsTheSamePerson] = useState(true);
   const [isHost, setIsHost] = useState(false);
-  const renderChatData = props.chatData.map((chatData) => (
+  const { chatData, hostName, canScroll } = props;
+
+  const renderChatData = chatData.map((chatData) => (
     <UserMessage
       user={chatData.user}
       userMessage={chatData.userMessage}
       theSamePerson={isTheSamePerson}
-      isHost={chatData.user === props.hostName ? true : false}
+      isHost={chatData.user === hostName ? true : false}
     ></UserMessage>
   ));
   const [flag, setFlag] = useState(true);
@@ -42,7 +44,7 @@ function ChatWindow(props) {
   });
 
   useEffect(() => {
-    if (props.canScroll) {
+    if (canScroll) {
       scrollRef.current.scrollIntoView();
       setTimeout(() => {
         props.canScrollCallback();

@@ -30,17 +30,21 @@ const InputTextWrapper = styled.input`
 `;
 const ButtonWrapper = styled.button`
   cursor: pointer;
-  padding-left: 25px;
-  padding-right: 25px;
   height: 100%;
   border: none;
   outline: none;
-  color: white;
+  color: rgba(130, 70, 219, 0.42);
   background-color: white;
   border-radius: 20px;
   font-size: 24px;
   margin-left: 20px;
-  background-color: rgba(130, 70, 219, 0.42);
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  &:hover {
+    background-color: #f1f1f1;
+  }
 `;
 
 function InputsSection(props) {

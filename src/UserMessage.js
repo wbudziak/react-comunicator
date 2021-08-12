@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 
 const UserMessageContainerWrapper = styled.div`
@@ -9,7 +9,7 @@ const UserMessageContainerWrapper = styled.div`
   justify-content: center;
 `;
 const UserNameWrapper = styled.p`
-  display: ${(props) => (props.host ? "none" : "block")};
+  display: ${(props) => props.host && "none"};
   margin: 0 !important;
   color: gray;
   font-size: 16px;
