@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/react-comunicator/static/css/main.1e6ce916.chunk.css",
-    "main.js": "/react-comunicator/static/js/main.1b52dc53.chunk.js",
-    "main.js.map": "/react-comunicator/static/js/main.1b52dc53.chunk.js.map",
+    "main.css": "/react-comunicator/static/css/main.b122fb56.chunk.css",
+    "main.js": "/react-comunicator/static/js/main.97dd4e63.chunk.js",
+    "main.js.map": "/react-comunicator/static/js/main.97dd4e63.chunk.js.map",
     "runtime-main.js": "/react-comunicator/static/js/runtime-main.070e31b7.js",
     "runtime-main.js.map": "/react-comunicator/static/js/runtime-main.070e31b7.js.map",
     "static/js/2.35e21920.chunk.js": "/react-comunicator/static/js/2.35e21920.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.ca0a45bc.chunk.js": "/react-comunicator/static/js/3.ca0a45bc.chunk.js",
     "static/js/3.ca0a45bc.chunk.js.map": "/react-comunicator/static/js/3.ca0a45bc.chunk.js.map",
     "index.html": "/react-comunicator/index.html",
-    "static/css/main.1e6ce916.chunk.css.map": "/react-comunicator/static/css/main.1e6ce916.chunk.css.map",
+    "static/css/main.b122fb56.chunk.css.map": "/react-comunicator/static/css/main.b122fb56.chunk.css.map",
     "static/js/2.35e21920.chunk.js.LICENSE.txt": "/react-comunicator/static/js/2.35e21920.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.070e31b7.js",
     "static/js/2.35e21920.chunk.js",
-    "static/css/main.1e6ce916.chunk.css",
-    "static/js/main.1b52dc53.chunk.js"
+    "static/css/main.b122fb56.chunk.css",
+    "static/js/main.97dd4e63.chunk.js"
   ]
 }
