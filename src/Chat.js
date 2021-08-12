@@ -1,4 +1,4 @@
-import React, { useCallback, useState, useEffect } from "react";
+import React, { useCallback, useState, useEffect, useRef } from "react";
 import Wrapper from "./Wrapper";
 import ChatWindow from "./Chatwindow";
 import InputsSection from "./InputsSection";
@@ -6,7 +6,9 @@ function Chat(props) {
   const [data, setData] = useState([]);
   const [isLoading, setIsLoading] = useState(false);
   const [error, setError] = useState(null);
-  const [username, setUsername] = useState(props.username);
+  const [hostName, setHostName] = useState(props.username);
+  const [canScroll, setCanScroll] = useState(false);
+
   const fetchChatData = useCallback(async () => {
     setIsLoading(true);
     setError(null);
@@ -31,11 +33,14 @@ function Chat(props) {
       setError(error.message);
     }
     setIsLoading(false);
-  });
+  }, []);
+
   useEffect(() => {
     fetchChatData();
-  }, [fetchChatData]);
+  }, [addChatDataHandler]);
+
   async function addChatDataHandler(chatData) {
+    setCanScroll(true);
     const response = await fetch(
       "https://comunicator-74c17-default-rtdb.europe-west1.firebasedatabase.app/chatData.json",
       {
@@ -47,18 +52,22 @@ function Chat(props) {
       }
     );
     const responseData = await response.json();
-    console.log(responseData);
   }
+  const canScrollFalse = () => {
+    setCanScroll(false);
+  };
   return (
     <Wrapper>
       <ChatWindow
         chatData={data}
         isLoading={isLoading}
-        username={username}
+        hostName={hostName}
+        canScroll={canScroll}
+        canScrollCallback={canScrollFalse}
       ></ChatWindow>
       <InputsSection
         chatData={addChatDataHandler}
-        username={username}
+        hostName={hostName}
       ></InputsSection>
     </Wrapper>
   );
